@@ -1,0 +1,21 @@
+{
+    "name": "ionic-001",
+    "version": "1.1.1",
+    "description": "ionic-001: An Ionic project",
+    "dependencies": {
+        "css-loader": "^0.26.1",
+        "style-loader": "^0.13.1"
+    },
+    "devDependencies": {
+        "extract-text-webpack-plugin": "^1.0.1",
+        "ts-loader": "^1.3.1",
+        "webpack": "^1.14.0"
+    },
+    "main": "gulpfile.js",
+    "scripts": {
+        "start": "webpack-dev-server --progress --colors  --inline --port 9111",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+}

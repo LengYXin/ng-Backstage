@@ -1,0 +1,9 @@
+<ul class="pagination">
+    <li><a href="javascript:void(0)" ng-click="Paging.Prev(1)">Prev</a></li>
+    <li><a href="javascript:void(0)" ng-show="Paging.Spot.Prev" ng-click="Paging.Prev(10)">...</a></li>
+    <li ng-repeat="p in Paging.PageNumber" ng-click="Paging.GO(p)" ng-class="{'active':Paging.currentPage==p}">
+        <a href="javascript:void(0)" ng-bind="p"></a>
+    </li>
+    <li><a href="javascript:void(0)" ng-show="Paging.Spot.Next" ng-click="Paging.Next(10)">...</a></li>
+    <li><a href="javascript:void(0)" ng-click="Paging.Next(1)">Next</a></li>
+</ul>

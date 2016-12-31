@@ -1,0 +1,102 @@
+<ion-view view-title="活动详情">
+    <ion-content>
+      <!-- 下拉刷新 -->
+      <ion-refresher on-refresh="vm.Lyx_LoadMore(1)"></ion-refresher>
+        <div class="detail BgWhite">
+            <img src="image/bg-img.jpg" err-src="images/default-medal.png" class="wh">
+            <div class="detail_text pl">
+              <h2 class="detail_title fz18 le-c33">把炽热的爱送给孩子们</h2>
+              <div class="prog pos_r">
+                <div class="progress pos_r fl">
+                  <p class="progress_bar pos_a"></p>
+                </div>
+                <span class="pos_a">75%</span>
+              </div>
+              <div class="release ptb15">
+                <p class="wcol50 fl fz14 le-c36"><i class="icon-le-child"></i><span> 6人已报名</span></p>
+                <p class="wcol50 inline fz14 le-c36"><i class="icon-le-time"></i><span> 90天前发布</span></p>
+              </div>
+            </div>
+         </div>
+         <div class="hezuo mt15 BgWhite">
+           <h2 class="pl50 pr30"><p class="fz16"><span class="le-c33">活动群组</span><span class="le-c36 pl50">阳光汇点五星加钻高级群</span><i class="icon-le-arrow-right fz14 le-c39 f-r"></i></p></h2>
+           <h2 class="pl50 pr30"><p class="fz16"><span class="le-c33">合作组织</span><span class="le-c36 pl50">WABC</span><i class="icon-le-arrow-right fz14 le-c39 f-r"></i></p></h2>
+         </div>
+         <div class="int mt15 BgWhite">
+              <h2 class="fz16 le-c33"><span class="bor_L mt10"></span>活动简介</h2>
+              <p class="fz-ml le-c36">夏日的阳光照着大地，让爱心在队员心中成长让温馨在敬老院中传播。</p>
+         </div>
+         <div class="int mt15 BgWhite" ng-init="flag=false">
+              <h2 class="fz16 le-c33"><span class="bor_L mt10"></span>活动说明</h2>
+              <p class="t2 fz-ml le-c36">2016年7月10日，星期日，高温蓝色预警，天气持续炎热。你我同行慈善义工服务队带领育才小学三八班的同学来到启蕊康复中心，给周末不能回家的智障孩子们包饺子。</p>
+              <div ng-if="flag">
+                <p class="t2 fz-ml le-c36">这次活动，学生和家长一共20多人。大家早早来到中心，家长们开始分工：有的买菜，有的买鸡蛋，有的买肉馅，有的买佐料，还有的给孩子们买矿泉水。不到九点，队员们就开始洗菜的洗菜，拌肉馅的拌肉馅，还有和面的，孩子们也都一起忙碌着。</p>
+                <p class="t2 fz-ml le-c36">天很热，但他们就要把这炽热的爱送给康复中心的孩子们。</p>
+                <p class="fz-ml le-c36"><a href="" class="le-cr">通讯员：张燕萍</a></p>
+              </div>
+              <div class="stop t-c fz-ml le-c36" ng-click="flag=!flag"><i class="icon-le-arrow-bottom" ng-class="{'deg180':flag==true}"></i>{{flag?"收起":"更多"}}</div>
+         </div>
+         <div class="int sign_up mt15 BgWhite" ng-init="flag=false">
+              <h2 class="fz16 le-c33"><span class="bor_L mt10"></span>报名事项</h2>
+              <p class="fz-ml le-c36">报名时间<span>2016/08/05 17:00  ~  2016/08/05 17:00</span></p>
+              <p class="fz-ml le-c36">活动日期<span>2016/08/05 17:00  ~  2016/08/05 17:00</span></p>
+              <div ng-if="flag">
+                <p class="fz-ml le-c36">活动名额<span>30人</span></p>
+                <p class="fz-ml le-c36">活动名额<span>24人</span></p>
+                <p class="fz-ml le-c36">每人可携带亲友数<span>2人</span></p>
+                <p class="fz-ml le-c36">活动地点<span>北京大学</span></p>
+                <p class="fz-ml le-c36">活动地点<span>北京大学</span></p>
+                <p class="fz-ml le-c36">费用承担说明<span>五</span></p>
+                <p class="fz-ml le-c36">技能要求<span>摄影师（9/10）</span><span>撰稿人（已满）</span></p>
+                <p class="fz-ml le-c36">招募需求<span>对老人儿童有爱心的志愿者</span></p>
+                <p class="fz-ml le-c36">&nbsp;&nbsp;&nbsp;联系人<span>邢秋硕</span></p>
+              </div>
+              <div class="stop t-c fz-ml le-c36" ng-click="flag=!flag"><i class="icon-le-arrow-bottom" ng-class="{'deg180':flag==true}"></i>{{flag?"收起":"更多"}}</div>
+         </div>
+         <div class="int mt15 BgWhite">
+              <h2 class="fz16 le-c33"><span class="bor_L mt10"></span>活动风采</h2>
+              <img src="image/bg-img.jpg" alt="">
+              <img src="image/bg-img.jpg" alt="">
+              <img src="image/bg-img.jpg" alt="">
+              <img src="image/bg-img.jpg" alt="">
+              <img src="image/bg-img.jpg" alt="">
+              <img src="image/bg-img.jpg" alt="">
+         </div>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="foot p0">
+      <div class="footer_tab tabs tabs-icon-top bor-ce7">
+          <a class="tab-item " ng-init="flag=false" ng-click="flag=!flag">
+            <i class="icon icon-le-like fz18 " ng-class="{'icon-le-Like le-cr':flag==true}"></i>
+            <p class="fz12 le-c39">喜欢</p>
+          </a>
+          <a class="tab-item">
+            <i class="icon icon-le-share fz18"></i>
+            <p class="fz12 le-c39">分享</p>
+          </a>
+          <a class="tab-item pos_r" ui-sref="Activity_comment({id:1})">
+            <i class="icon icon-le-comment fz18"></i>
+            <p class="fz12 le-c39">评论</p>
+            <span class="comment_num pos_a BgRed fz10 le-c3f tc bor-r5">99+</span>
+          </a>
+          <a class="baoming block" ui-sref="Activity_egis({id:1})">
+            <button class="BgRed baoming_btn fz17 le-c3f">报名</button>
+          </a>
+      </div>
+      
+    </ion-footer-bar>
+</ion-view>
+<!-- <div class="tabs tabs-icon-top">
+    <a class="tab-item">
+      <i class="icon icon-le-like"></i>
+      喜欢
+    </a>
+    <a class="tab-item">
+      <i class="icon icon-le-share"></i>
+      分享
+    </a>
+    <a class="tab-item">
+      <i class="icon icon-le-comment"></i>
+      评论
+    </a>
+    <button class="button BgRed le-c3f">报名</button>
+</div> -->

@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?1u0zro');
+  src:  url('fonts/icomoon.eot?1u0zro#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1u0zro') format('truetype'),
+    url('fonts/icomoon.woff?1u0zro') format('woff'),
+    url('fonts/icomoon.svg?1u0zro#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-le-one:before {
+  content: "\e900";
+}
+.icon-le-two:before {
+  content: "\e901";
+}
+.icon-le-three:before {
+  content: "\e902";
+}
+.icon-le-radio:before {
+  content: "\e903";
+}
+.icon-le-radioBox:before {
+  content: "\e904";
+}
+.icon-le-nail:before {
+  content: "\e905";
+}
+.icon-le-check-mark:before {
+  content: "\e906";
+}
+.icon-le-arrow-left:before {
+  content: "\e907";
+}
+.icon-le-share:before {
+  content: "\e908";
+}
+.icon-le-grou:before {
+  content: "\e909";
+}
+.icon-le-checkBox:before {
+  content: "\e90a";
+}
+.icon-le-plus:before {
+  content: "\e90b";
+}
+.icon-le-arrow-right:before {
+  content: "\e90c";
+}
+.icon-le-arrow-bottom:before {
+  content: "\e90d";
+}
+.icon-le-ranking:before {
+  content: "\e90e";
+}
+.icon-le-comment:before {
+  content: "\e90f";
+}
+.icon-le-child:before {
+  content: "\e910";
+}
+.icon-le-task:before {
+  content: "\e911";
+}
+.icon-le-scanCode:before {
+  content: "\e912";
+}
+.icon-le-screen:before {
+  content: "\e913";
+}
+.icon-le-remove:before {
+  content: "\e914";
+}
+.icon-le-set-up:before {
+  content: "\e915";
+}
+.icon-le-time:before {
+  content: "\e916";
+}
+.icon-le-home:before {
+  content: "\e917";
+}
+.icon-le-mail-list:before {
+  content: "\e918";
+}
+.icon-le-my:before {
+  content: "\e919";
+}
+.icon-le-no-data:before {
+  content: "\e91a";
+}
+.icon-no-network-state:before {
+  content: "\e91b";
+}
+.icon-le-like:before {
+  content: "\e91c";
+}
+.icon-le-news:before {
+  content: "\e91d";
+}
+.icon-le-new:before {
+  content: "\e91e";
+}
+.icon-le-checked:before {
+  content: "\e91f";
+}
+.icon-le-Like:before {
+  content: "\e920";
+}
+.icon-le-Activity-par:before {
+  content: "\e921";
+}
+.icon-le-public:before {
+  content: "\e922";
+}
+.icon-le-activity:before {
+  content: "\e923";
+}
+.icon-le-stting:before {
+  content: "\e924";
+}
+.icon-le-my-news:before {
+  content: "\e925";
+}
+.icon-le-add-mailList:before {
+  content: "\e926";
+}
+.icon-le-add:before {
+  content: "\e927";
+}
+.icon-le-chat:before {
+  content: "\e928";
+}
+.icon-le-grous:before {
+  content: "\e929";
+}
+.icon-le-mailList:before {
+  content: "\e92a";
+}
+

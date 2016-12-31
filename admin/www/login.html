@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proton - Admin Template</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href="assets/css/add-ons.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+    <link href="dist/styles.css" rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <div class="container-fluid content" ng-controller="Login as vm">
+        <div class="row">
+            <div id="content" class="col-sm-12 full">
+                <div class="row">
+                    <div class="login-box">
+
+                        <div class="header">
+                            Login to Proton
+                        </div>
+                        <div class="text-center">
+                            <li>
+                                <a href="" class="fa fa-facebook facebook-bg"></a>
+                            </li>
+                            <li>
+                                <a href="" class="fa fa-twitter twitter-bg"></a>
+                            </li>
+                            <li>
+                                <a href="" class="fa fa-linkedin linkedin-bg"></a>
+                            </li>
+                        </div>
+
+                        <div class="text-with-hr">
+                            <span>or</span>
+                        </div>
+
+                        <form class="form-horizontal login" ng-submit="vm.Login()">
+                            <fieldset class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="controls row">
+                                        <div class="input-group col-sm-12">
+                                            <input type="text" class="form-control" ng-model="vm.uid" placeholder="Username or E-mail" />
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="controls row">
+                                        <div class="input-group col-sm-12">
+                                            <input type="password" class="form-control" ng-model="vm.pwd" placeholder="Password" />
+                                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="confirm">
+                                    <input type="checkbox" name="remember" />
+                                    <label for="remember">Remember me</label>
+                                </div>
+                                <div class="row">
+                                    <button type="submit" class="btn btn-lg btn-primary col-xs-12">Login</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <a class="pull-left" href="page-login.html#">Forgot Password?</a>
+                        <a class="pull-right" href="page-register.html">Sign Up!</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!--/row-->
+
+            </div>
+
+        </div>
+        <!--/row-->
+    </div>
+    <!--<script src="http://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.5.9/angular.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.5.9/angular-animate.min.js"></script>-->
+    <script src="dist/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<div>
+    <div class="panel panel-default" ng-if="vm.Show">
+        <!--sam-Table-->
+        <div class="panel-heading">
+            <h2><i class="fa fa-table red"></i><span class="break"></span><strong ng-bind="vm.samTableConfig.Title | translate"></strong></h2>
+            <div class="panel-actions">
+                <a href="javascript:void(0)" class="btn-setting" ng-click="vm.PagingLoadData(1)"><i class="fa fa-rotate-right"></i></a>
+                <a href="javascript:void(0)" class="btn-minimize" ng-click="vm.hideTable()"><i class="fa fa-chevron-up" ng-class="{'fa-chevron-down':vm.TableShow}"></i></a>
+                <a href="javascript:void(0)" class="btn-close" ng-click="vm.close()"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <div class="panel-body" ng-show="vm.TableShow">
+            <div ng-transclude="samTableSearch"></div>
+            <table class="table">
+                <thead ng-show="vm.PagingConfig.list">
+                    <tr>
+                        <th ng-repeat="t in vm.samTableConfig.TableColumn.thead" ng-bind="t | translate" ng-style="vm.samTableConfig.TableColumn.style[$index]"></th>
+                        <th ng-if="vm.samTableConfig.onEvent.length" ng-bind="'操作' | translate"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="t in vm.PagingConfig.list">
+                        <td ng-repeat="v in vm.samTableConfig.TableColumn.tbody"><span ng-bind="t[v]"></span></td>
+                        <td>
+                            <span ng-repeat="o in vm.samTableConfig.onEvent">
+                            <button type="button" class="btn btn-xs btn-danger"  ng-bind="o.Title | translate" ng-click="o.OnEvent(t)"></button>
+                            &nbsp;
+                            </span>
+                        </td>
+                    </tr>
+                    <tr ng-show="!vm.PagingConfig.list">
+                        <td class="text-center table-loading" colspan="5">
+                            {{vm.PagingConfig.LoadingHints | translate}}......
+                        </td>
+                    </tr>
+                    <tr ng-show="vm.PagingConfig.list&&vm.PagingConfig.list.length==0">
+                        <td class="text-center table-loading" colspan="5">
+                            {{'暂无数据' | translate}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <sam-Paging ng-if="vm.PagingConfig.pageCount>1"></sam-Paging>
+        </div>
+    </div>
+</div>

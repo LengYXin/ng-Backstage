@@ -1,0 +1,190 @@
+<ion-view view-title="乐奉献">
+    <ion-nav-buttons side="left">
+        <button class="button BgRed fz15 le-c3f" ui-sref="Home_mechanism({id:1})">
+        慈福公益<i class="icon-le-arrow-bottom"></i>
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button BgRed fz15 le-c3f" ng-click="doSomething()">
+        签到
+      </button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader tab_button">
+        <div class="button-bar BgWhite tabs-top">
+            <div><a on-tap="vm.switch('Whole')" ng-class="{'active':vm.TYPE=='Whole'}">全部</a></div>
+            <div><a ng-class="{'active':vm.TYPE=='Activity'}" on-tap="vm.switch('Activity')">活动</a></div>
+            <div><a ng-class="{'active':vm.TYPE=='Donation'}" on-tap="vm.switch('Donation')">捐赠</a></div>
+            <div><a ng-class="{'active':vm.TYPE=='$event'}" on-tap="vm.Popover.show('$event')"><i class="icon-le-screen"></i></a></div>
+        </div>
+    </div>
+    <ion-content class="has-subheader">
+        <!-- 下拉刷新 -->
+        <ion-refresher on-refresh="vm.Lyx_LoadMore(1)"></ion-refresher>
+        <div class="list_banner" ng-if="vm.TYPE=='Whole'">
+          <ion-item>
+            <div class="activity_list p15 bor-r5" ui-sref="Activity({id:1})">
+              <div class="clear">
+                <img src="image/bg-img.jpg" err-src="images/default-medal.png" class="">               
+                  <div class="activity_text">
+                    <h2 class="fz-ml le-c33 lh20 pt5"><span class="le-cr">[志愿活动]</span><p class="ell">把炽热的爱送给可爱的孩子们</p></h2>
+                    <div class="prog pos_r">
+                      <div class="progress pos_r fl">
+                        <p class="progress_bar pos_a"></p>
+                      </div>
+                      <span class="pos_a">75%</span>
+                    </div>
+                    <div class="recruit">
+                      <p class="fz12 le-c36 fl">6人已报名</p><a href="" class="Bg-f7 fz10 le-c3f fr bor-r50">正在招募</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="clear activity_icon fz12">
+                  <a href=""><i class="icon-le-time"></i><span class="le-c39"> 12天</span></a>
+                  <a href=""><i class="icon-le-comment"></i><span class="le-c39"> 36条</span></a>
+                  <a href=""><i class="icon-le-like"></i><span class="le-c39"> 210人</span></a>
+                </div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div class="activity_list p15 bor-r5" ui-sref="Donation({id:1})">
+              <div class="clear">
+                <img src="image/bg-img.jpg" err-src="images/default-medal.png">               
+                  <div class="activity_text">
+                    <h2 class="fz-ml le-c33 lh20 pt5"><span class="le-cr">[志愿活动]</span><p class="ell">把炽热的爱送给可爱的孩子们</p></h2>
+                    <div class="prog pos_r">
+                      <div class="progress pos_r fl">
+                        <p class="progress_bar pos_a"></p>
+                      </div>
+                      <span class="pos_a">75%</span>
+                    </div>
+                    <div class="recruit">
+                      <p class="fz12 le-c36 fl">6人已报名</p><a href="" class="Bg-e3 fz10 le-c3f fr bor-r50">已结束</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="clear activity_icon fz12">
+                  <span class="le-c39 col-75" style="width:40%;display:inline-block;">已筹款：<i class="le-cg">￥100.00</i></span>
+                  <span class="le-c39">目标金额：<i class="le-cg">￥100.00</i></span>
+                  <span class="le-c39 fr"><i>12天</i></span>
+                </div>
+            </div>
+          </ion-item>
+        </div>
+        <!-- 暂无数据 -->
+          <div class="noData">
+              <p><i class="icon-le-no-data le-c3c"></i></p>
+              <p class="fz15 le-c3c">暂无数据哦~</p>
+          </div>
+
+        <!-- 活动主题 -->
+        <div id="" class="activity_box pos_a BgWhite" ng-if="">
+          <div class="arrow-up pos_a"></div>
+          <div class="activity_theme">
+            <h2 class="activity_theme_title fz-ml"><span class="bor_L mt10"></span>活动主题</h2>
+            <div class="activity_theme_btn pb10">
+                <button class="button mr20 active">
+                  全部
+                </button>
+                <button class="button mr20 mb20">
+                  DTV
+                </button>
+                <button class="button mr20 mb20">
+                  周五大集 Friday Market Beijing
+                </button>
+                <button class="button mr20 mb20">
+                  扶贫赈灾小组
+                </button>
+                <button class="button mr20 mb20">
+                  设计思维
+                </button>
+                <button class="button mr20 mb20">
+                  捐赠群组
+                </button>
+                <button class="button mr20 mb20">
+                  英超
+                </button>
+                <button class="button mr20 mb20">
+                  环境保护
+                </button>
+                <button class="button mr20 mb20">
+                  阳光汇点五星加钻高级群
+                </button>
+                <button class="button mr20 mb20">
+                  关爱失独家庭
+                </button>
+            </div>
+          </div>
+          <div class="BgF5 pb10"></div>
+          <div class="activity_state">
+            <h2 class="activity_state_title fz-ml"><span class="bor_L mt10 blue"></span>活动主题</h2>
+            <div class="activity_state_btn pb10">
+                <button class="button mr20 active">
+                  全部
+                </button>
+                <button class="button mr20 mb20">
+                  即将招募
+                </button>
+                <button class="button mr20 mb20">
+                  正在招募
+                </button>
+                <button class="button mr20 mb20">
+                  活动进行中
+                </button>
+                <button class="button mr20 mb20">
+                  活动结束
+                </button>
+            </div>
+          </div>
+          <div class="BgF5 pb10"></div>
+          <div class="activity_state_y">
+            <h2 class="activity_state_y_title fz-ml"><span class="bor_L mt10 yellow"></span>活动主题</h2>
+            <div class="activity_state_y_btn pb10">
+                <button class="button mr20 active">
+                  全部
+                </button>
+                <button class="button mr20 mb20">
+                  即将招募
+                </button>
+                <button class="button mr20 mb20">
+                  正在招募
+                </button>
+                <button class="button mr20 mb20">
+                  活动进行中
+                </button>
+                <button class="button mr20 mb20">
+                  活动结束
+                </button>
+            </div>
+          </div>
+        </div>
+        <!-- 滚动加载 -->
+        <ion-infinite-scroll on-infinite="vm.Lyx_LoadMore()" distance="1%" ng-if="vm.infiniteScroll"></ion-infinite-scroll>
+      </ion-content>
+      <ion-tabs class="tabs-icon-top le-tabs hide-on-keyboard-open">
+
+          <!--首页-->
+          <ion-tab title="首页" icon-off="icon-le-home" icon-on="icon-le-home" ui-sref="Home">
+              <!--<ion-nav-view name="tabs-home"></ion-nav-view>-->
+          </ion-tab>
+
+          <!--朋友-->
+          <ion-tab title="朋友" icon-off="icon-le-mail-list" icon-on="icon-le-mail-list"  ui-sref="friend">
+            <!--<ion-nav-view name="tabs-cl"></ion-nav-view>-->
+          </ion-tab>
+
+          <!--群组-->
+          <ion-tab title="群组" icon-off="icon-le-grou" icon-on="icon-le-grou"  ui-sref="Group">
+            <!--<ion-nav-view name="tabs-sc"></ion-nav-view>-->
+          </ion-tab>
+
+        <!--新闻-->
+          <ion-tab title="新闻" icon-off="icon-le-new" icon-on="icon-le-new" ui-sref="News">
+            <!--<ion-nav-view name="tabs-user"></ion-nav-view>-->
+          </ion-tab>
+          <!--我的-->
+          <ion-tab title="我的" icon-off="icon-le-my" icon-on="icon-le-my" ui-sref="User">
+            <!--<ion-nav-view name="tabs-user"></ion-nav-view>-->
+          </ion-tab>
+          
+      </ion-tabs>
+</ion-view>

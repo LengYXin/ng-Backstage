@@ -1,0 +1,61 @@
+<ion-view view-title="当前机构-+">
+      <ion-nav-buttons side="right">
+          <button class="button BgRed fz15 le-c3f" ng-click="doSomething()">
+          添加
+        </button>
+      </ion-nav-buttons>
+      <ion-content>
+         <div class="mechanism">
+           <div class="mechanism_search fz14 le-c34">
+             <i class="icon_search ion-ios-search-strong fz16 le-c39 pos_a"></i>
+             <input type="text" class="BgWhite bd bor-ce8 bor-r50 t-c BgWhite" value="" placeholder="请输入机构名称">
+           </div>
+           <div class="my_mechanism">
+             <h2 class="title fz-ml le-c33 plr20 bdb-h bor-ce8">
+                <span class="bor_L mt10"></span>我加入的机构
+             </h2>
+             <!-- <a href="">慈福公益基金会</a>
+             <a href="">北京彩虹桥慈善基金会</a>
+             <a href="">北京灯火公益基金会</a> -->
+             <div class="my_mechanism_list list BgWhite pl40">
+                <div class="h110">
+                    <a href="">慈福公益基金会</a>
+                </div>
+                <div class="h110">
+                    <a href="">北京彩虹桥慈善基金会</a>
+                </div>
+                <div class="h110">
+                    <a href="">北京灯火公益基金会</a>
+                </div>
+                <div class="h110">
+                    <a href="">慈福公益基金会</a>
+                </div>
+            </div>
+           </div>
+           <div class="all_mechanism">
+             <h2 class="title all_mechanism_title fz-ml le-c33 plr20">
+                <span class="bor_L mt10"></span>我加入的机构
+             </h2>
+              <div class="all_mechanism_list BgWhite pl40">
+                <div>
+                    <a href=""><span class="le-cr">[默认]</span>慈福公益基金会</a>
+                </div>
+                <div class="pos_r" ng-init="flag=false" ng-click="flag=!flag">
+                    <a href="">慈福公益基金会</a>
+                    <div class="cur_mechanism_btn pos_a" ng-class="{'none':flag==false}">
+                      <button class="button-assertive plr25 Bg_c3d fz14 le-c3f">
+                        设为默认
+                      </button><button class="button-positive plr28 Bg_cerd fz14 le-c3f">
+                        删除
+                      </button>
+                    </div>
+                </div>
+                <div class="">
+                    <a href="">慈福公益基金会</a>
+                </div>
+              </div>
+              
+           </div>
+         </div>
+      </ion-content>
+</ion-view>

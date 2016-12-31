@@ -1,0 +1,11 @@
+{
+    "name": "admin",
+    "version": "0.0.1",
+    "description": "",
+    "main": "webpack.config.js",
+    "scripts": {
+        "start": "webpack-dev-server --progress",
+        "build": "webpack --config webpack.build.js"        
+    },
+    "author": "yinzx"
+}

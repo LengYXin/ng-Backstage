@@ -1,0 +1,17 @@
+<li class="parent_li">
+    <span class="label" ng-bind="t.MenuName" ng-class="{true:'label-success',false:'label-default'}[t.Enabled==1]"></span>
+    
+    <b>
+        <i class="fa fa-plus-square-o" ng-click="vm.popupCreate(t)"></i>
+        <i class="fa fa-arrow-up" ng-click="vm.menu_up(t)"></i>
+        <i class="fa fa-arrow-down" ng-click="vm.menu_down(t)"></i>
+        <i class="fa fa-check-square-o" ng-click="vm.menu_disable(t)" ng-if="t.Enabled==1"></i>
+        <i class="fa fa-square-o" ng-click="vm.menu_enable(t)" ng-if="t.Enabled!=1"></i>
+        <i class="fa fa-trash-o" ng-click="vm.menu_remove(t)"></i>
+    </b>
+    <b>{{t._idx}}-{{t.SortNo}}</b>
+
+    <ul ng-if='t.Menus.length>0'>
+        <sam-Tree-Node templateurl="templates/Sys/MenuManage/Tree.html" ng-repeat="t in t.Menus"></sam-Tree-Node>
+    </ul>
+</li>

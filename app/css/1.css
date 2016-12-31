@@ -1,0 +1,12 @@
+.div1 {
+    color: red;
+}
+
+body {
+    background-color: red
+}
+
+.bar .button-bar>.button,
+.bar .buttons>.button {
+    background: #fff;
+}

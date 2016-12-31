@@ -1,0 +1,42 @@
+<ion-view view-title="新闻">
+      <ion-content>
+      <!-- 下拉刷新 -->
+      <ion-refresher on-refresh="vm.Lyx_LoadMore(1)"></ion-refresher>
+        <div class="news_list list plr20">
+            <a class="news_item item mt20 bor-r3" ui-sref="News_details({id:1})">
+                <h2 class="fz-ml news_title">
+                    <span class="re bd bor-cr le-cr bor-r3">热</span>
+                    <p class="">爱幼赋能社的公益感召力，公益人一起get...</p>
+                </h2>
+                <p class="fz12 le-c39 lh42 ell">8月18日，爱佑“赋能社公益行业中层管理者训练营”首期班在北京正式启动！这是继4月“赋能社CEO培训课程“结束后....</p>
+                <p class="fz12 le-c39 lh54">
+                    <i class="icon-le-my"></i><span class="pl5">秦雪迪</span>
+                    <i class="icon-le-time pl28"></i><span class="pl5">2016-09-02</span>
+                </p>
+            </a>
+            <a class="new_item item mt20 bor-r3" ui-sref="News_details({id:2})">
+                <h2 class="fz-ml news_title">
+                    <span class="re bd bor-cr le-cr bor-r3">热</span>
+                    <p class="">爱幼赋能社的公益感召力，公益人一起get...</p>
+                </h2>
+                <p class="fz12 le-c39 lh42 ell">8月18日，爱佑“赋能社公益行业中层管理者训练营”首期班在北京正式启动！这是继4月“赋能社CEO培训课程“结束后....</p>
+                <p class="fz12 le-c39 lh54">
+                    <i class="icon-le-my"></i><span class="pl5">秦雪迪</span>
+                    <i class="icon-le-time pl28"></i><span class="pl5">2016-09-02</span>
+                </p>
+            </a>
+            <a class="new_item item mt20 bor-r3" ui-sref="News_details({id:3})">
+                <h2 class="fz-ml news_title">
+                    <p class="">让贫困生同样享有出彩人生，全国总资助额84...</p>
+                </h2>
+                <p class="fz12 le-c39 lh42 ell">8月18日，爱佑“赋能社公益行业中层管理者训练营”首期班在北京正式启动！这是继4月“赋能社CEO培训课程“结束后....</p>
+                <p class="fz12 le-c39 lh54">
+                    <i class="icon-le-my"></i><span class="pl5">秦雪迪</span>
+                    <i class="icon-le-time pl28"></i><span class="pl5">2016-09-02</span>
+                </p>
+            </a>
+        </div>
+      <!-- 滚动加载 -->
+      <ion-infinite-scroll on-infinite="vm.Lyx_LoadMore()" distance="1%" ng-if="vm.infiniteScroll"></ion-infinite-scroll>
+      </ion-content>
+</ion-view>

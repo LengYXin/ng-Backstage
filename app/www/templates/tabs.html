@@ -1,0 +1,32 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-nav-view name="tabs-home"></ion-nav-view>
+<ion-tabs class="tabs-icon-top le-tabs hide-on-keyboard-open">
+
+  <!--首页-->
+  <ion-tab title="首页" icon-off="icon-le-home" icon-on="icon-le-home" ui-sref="tabs.home">
+      <!--<ion-nav-view name="tabs-home"></ion-nav-view>-->
+  </ion-tab>
+
+  <!--朋友-->
+  <ion-tab title="朋友" icon-off="icon-le-mail-list" icon-on="icon-le-mail-list"  ui-sref="tabs.friend">
+    <!--<ion-nav-view name="tabs-cl"></ion-nav-view>-->
+  </ion-tab>
+
+  <!--群组-->
+  <ion-tab title="群组" badge="ShoppingTabsBadge" badge-style="badge-positive" icon-off="icon-le-grou" icon-on="icon-le-grou"  ui-sref="tabs.group">
+    <!--<ion-nav-view name="tabs-sc"></ion-nav-view>-->
+  </ion-tab>
+
+ <!--新闻-->
+  <ion-tab title="新闻" icon-off="icon-le-new" icon-on="icon-le-new" ui-sref="tabs.journalism">
+    <!--<ion-nav-view name="tabs-user"></ion-nav-view>-->
+  </ion-tab>
+  <!--我的-->
+  <ion-tab title="我的" icon-off="icon-le-my" icon-on="icon-le-my" ui-sref="tabs.user">
+    <!--<ion-nav-view name="tabs-user"></ion-nav-view>-->
+  </ion-tab>
+</ion-tabs>

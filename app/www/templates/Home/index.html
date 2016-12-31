@@ -1,0 +1,43 @@
+<ion-view view-title="乐奉献">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="doSomething()">
+        慈福公益
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="doSomething()">
+        签到
+      </button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader">
+        <div class="button-bar">
+            <a class="button" on-tap="vm.switch('Whole')">全部</a>
+            <a class="button" on-tap="vm.switch('Activity')">活动</a>
+            <a class="button" on-tap="vm.switch('Donation')">捐赠</a>
+            <a class="button" on-tap="vm.Popover.show($event);">筛选</a>
+        </div>
+    </div>
+    <ion-content class="has-subheader">
+        <!-- 下拉刷新 -->
+        <ion-refresher on-refresh="vm.Lyx_LoadMore(1)"></ion-refresher>
+        <h1 ng-bind="vm.TYPE"></h1>
+
+        <ion-list ng-if="vm.TYPE=='Whole'">
+            <ion-item ng-repeat="t in vm.dataList">
+                {{t.title}}
+            </ion-item>
+        </ion-list>
+        <ion-list ng-if="vm.TYPE=='Activity'">
+            <ion-item ng-repeat="t in vm.dataList">
+                {{t.pic}}
+            </ion-item>
+        </ion-list>
+        <ion-list ng-if="vm.TYPE=='Donation'">
+            <ion-item ng-repeat="t in vm.dataList">
+                {{t.username}}
+            </ion-item>
+        </ion-list>
+        <!-- 滚动加载 -->
+        <ion-infinite-scroll on-infinite="vm.Lyx_LoadMore()" distance="1%" ng-if="vm.infiniteScroll"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>
